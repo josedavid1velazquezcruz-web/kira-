@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Abrazo Virtual para Mi Novia</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff6b6b, #ff4d4d, #ff1f1f);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 900px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+  }
+
+  h1 {
+    font-size: 28px;
+    font-weight: 800;
+  }
+
+  button {
+    padding: 10px 18px;
+    border: none;
+    background: #ff6a9e;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    background: #ff407f;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+
+  .heart {
+    width: 130px;
+    margin: auto;
+    animation: beat 1.6s infinite ease-in-out;
+  }
+
+  @keyframes beat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+  }
+
+  .stickers {
+    font-size: 26px;
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="card">
+    <h1>Un abrazo virtual para mi personita especial  💞</h1>
+<button id="btnMensaje" style="margin-top:10px; background:#ff3b6a;">Tienes un mensaje 💌</button>
+
+<div id="mensajeOculto" style="display:none; margin-top:20px;">
+  <h2>💗 Mensaje especial para ti 💗</h2>
+  <p style="font-size:15px; line-height:1.5;">es verdad que no te conosco aun mucho pero me gustaria dedicarte esto cada vez que estes mal y puedas tener un abrazovirtual 
+
+  </p>
+
+  <!-- VIDEO LOCAL (reemplaza "video1.mp4" por tu archivo) -->
+  <video src="abrazo virtual.mp4" controls style="width:100%; border-radius:12px;"></video>
+</div>
+
+<script>
+  document.getElementById('btnMensaje').onclick = function() {
+    let box = document.getElementById('mensajeOculto');
+    box.style.display = box.style.display === 'none' ? 'block' : 'none';
+  };
+</script>
+
+    <p>talvez no pueda atravesar la pantalla pero te dedico este corazon con mis manos . 🤗</p>
+
+    <div style="text-align:center; margin: 20px 0;">
+      <!-- CORAZÓN LOCAL (descárgalo y renómbralo) -->
+      <img class="heart" src="corazon .jpg" alt="corazon" />
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Imágenes bonitas para ti ✨</h2>
+    <p>Guarda la que más te guste mi amor ✨</p>
+
+    <div class="gallery">
+      <img src="conejo abrazo.jpg" />
+      <img src="conejo abrazo 2.jpg" />
+      <img src="conejo beso.jpg" />
+      <img src="conejo beso 2.jpg" />
+    </div>
+
+    <div class="stickers">
+      🌸 🎀 ✨ 💫 🌈 💕
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:20px;">
+    <h2>🎵 Música para ti mi </h2>
+    <p>canciones que cuando las escucho me recuerda a ti en el sentimiento y siento que las que nos representa  💗</p>
+
+    <div style="margin-top:15px; display:grid; gap:20px;">
+
+      <!-- VIDEO MUSICAL LOCAL -->
+      <video src="Kenia Os - Escríbeme (Official Video).mp4" controls style="width:100%; border-radius:12px;"></video>
+
+     <!-- VIDEO MUSICAL LOCAL -->
+      <video src="Morat - No Se Va ❤️_ LETRA.mp4" controls style="width:100%; border-radius:12px;"></video>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
